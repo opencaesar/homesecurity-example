@@ -1,0 +1,54 @@
+vocabulary <http://example.com/secure/architecture#> as secure {
+
+	extends <http://example.com/methodology/system#> as system
+
+	extends <http://example.com/homesecurity/architecture#> as hsa
+
+	extends <http://example.com/smart/sensors#> as smart
+
+	extends <http://example.com/safe/alarms#> as safe
+
+	extends <http://example.com/supreme/monitors#> as supreme
+
+	concept SecuritySystem < hsa:SecuritySystem [
+		restricts system:presents to exactly 1 I1
+		restricts system:presents to exactly 1 I2
+		restricts system:contains to min 2 smart:SmokeSensor
+		restricts system:contains to min 1 smart:MotionSensor
+		restricts system:contains to exactly 1 safe:AlarmSystem
+		restricts system:contains to exactly 1 supreme:MonitoringSystem
+	]
+
+	concept I1 < hsa:I1
+
+	concept I2 < hsa:I2
+
+	// Junction 1
+	concept Junction1 < hsa:Junction1 [
+		restricts system:joins to exactly 1 I1
+		restricts system:joins to exactly 1 safe:I5
+	]
+
+	// Junction 2
+	concept Junction2 < hsa:Junction2 [
+		restricts system:joins to exactly 1 supreme:I8
+		restricts system:joins to exactly 1 I2
+	]
+
+	// Junction 3
+	concept Junction3.S < hsa:Junction3 [
+		restricts system:joins to exactly 1 smart:I3.S
+		restricts system:joins to exactly 1 safe:I4
+	]
+
+	concept Junction3.M < hsa:Junction3 [
+		restricts system:joins to exactly 1 smart:I3.M
+		restricts system:joins to exactly 1 safe:I4
+	]
+
+	// Junction 4
+	concept Junction4 < hsa:Junction4 [
+		restricts system:joins to exactly 1 safe:I6
+		restricts system:joins to exactly 1 supreme:I7
+	]
+}

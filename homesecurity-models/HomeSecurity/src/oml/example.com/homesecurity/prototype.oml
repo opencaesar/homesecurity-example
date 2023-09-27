@@ -1,0 +1,74 @@
+description <http://example.com/homesecurity/prototype#> as prototype {
+
+	uses <http://example.com/homesecurity/architecture#> as hsa
+
+	uses <http://example.com/methodology/system#> as system
+
+	// Security System
+	instance SecuritySystem : hsa:SecuritySystem [
+		system:hasIdentifier "SecuritySystem"
+		system:presents I1
+		system:presents I2
+		system:contains Sensor
+		system:contains AlarmSystem
+		system:contains MonitoringSystem
+	]
+	instance I1 : hsa:I1 [ system:hasIdentifier "I1" ]
+	instance I2 : hsa:I2 [ system:hasIdentifier "I2" ]
+	
+	//  Sensor
+	instance Sensor : hsa:Sensor [
+		system:hasIdentifier "Sensor"
+		system:presents I3
+	]
+	instance I3 : hsa:I3 [ system:hasIdentifier "I3" ]
+
+	// Alarm System
+	instance AlarmSystem : hsa:AlarmSystem [
+		system:hasIdentifier "AlarmSystem"
+		system:presents I4
+		system:presents I5
+		system:presents I6
+	]
+	instance I4 : hsa:I4 [ system:hasIdentifier "I4" ]
+	instance I5 : hsa:I5 [ system:hasIdentifier "I5" ]
+	instance I6 : hsa:I6 [ system:hasIdentifier "I6" ]
+
+	// Monitoring System
+	instance MonitoringSystem : hsa:MonitoringSystem [
+		system:hasIdentifier "MonitoringSystem"
+		system:presents I7
+		system:presents I8
+	]
+	instance I7 : hsa:I7 [ system:hasIdentifier "I7" ]
+	instance I8 : hsa:I8 [ system:hasIdentifier "I8" ]
+
+	// Junction 1
+	instance Junction1 : hsa:Junction1 [
+		system:hasIdentifier "Junction1"
+		system:joins I1
+		system:joins I5
+	]
+
+	// Junction 2
+	instance Junction2 : hsa:Junction2 [
+		system:hasIdentifier "Junction2"
+		system:joins I8
+		system:joins I2
+	]
+
+	// Junction 3
+	instance Junction3 : hsa:Junction3 [
+		system:hasIdentifier "Junction3"
+		system:joins I3
+		system:joins I4
+	]
+
+	// Junction 4
+	instance Junction4 : hsa:Junction4 [
+		system:hasIdentifier "Junction4"
+		system:joins I6
+		system:joins I7
+	]
+	
+}

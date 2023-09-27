@@ -1,0 +1,8 @@
+rootProject.name = 'homesecurity-models'
+
+include 'Methodology'
+include 'HomeSecurity'
+include 'SmartSensors'
+include 'SafeAlarms'
+include 'SupremeMonitors'
+include 'SecureSystems'

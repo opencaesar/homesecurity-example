@@ -1,0 +1,6 @@
+description bundle <http://example.com/secure/bundle#> as ^bundle {
+
+	uses <http://example.com/secure/v-bundle#>	
+	
+	includes <http://example.com/secure/prototype#>
+}

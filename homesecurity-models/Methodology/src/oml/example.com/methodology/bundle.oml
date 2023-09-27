@@ -1,0 +1,4 @@
+vocabulary bundle <http://example.com/methodology/bundle#> as ^bundle {
+	
+	includes <http://example.com/methodology/system#>
+}

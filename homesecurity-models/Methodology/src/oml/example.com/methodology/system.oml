@@ -1,0 +1,76 @@
+vocabulary <http://example.com/methodology/system#> as system {
+
+	extends <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	aspect IdentifiedElement [ 
+		key hasIdentifier
+	]
+
+	concept Component < IdentifiedElement
+
+	concept Interface < IdentifiedElement
+
+	concept Message < IdentifiedElement
+
+	concept Junction < IdentifiedElement
+
+	scalar property hasIdentifier [
+		domain IdentifiedElement
+		range xsd:string
+	]
+
+	relation contains [
+		from Component
+		to Component
+		reverse isContainedIn
+		inverse functional
+		asymmetric
+		irreflexive
+	]
+
+	relation presents [
+		from Component
+		to Interface
+		reverse isPresentedBy
+		inverse functional
+		asymmetric
+		irreflexive
+	]
+
+	relation traverses [
+		from Message
+		to Junction
+		reverse isTraversedBy
+		asymmetric
+		irreflexive
+	]
+
+	relation joins [
+		from Junction
+		to Interface
+		reverse isJoinedIn
+		asymmetric
+		irreflexive
+	]
+
+	relation transfers [
+		from Interface
+		to Message
+		asymmetric
+		irreflexive
+	]
+
+	relation transfersIn [
+		from Interface
+		to Message
+		asymmetric
+		irreflexive
+	]
+
+	relation transfersOut [
+		from Interface
+		to Message
+		asymmetric
+		irreflexive
+	]
+}

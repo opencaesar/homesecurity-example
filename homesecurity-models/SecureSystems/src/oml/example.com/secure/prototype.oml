@@ -1,0 +1,136 @@
+description <http://example.com/secure/prototype#> as prototype {
+
+	uses <http://example.com/methodology/system#> as system
+
+	uses <http://example.com/smart/sensors#> as smart
+
+	uses <http://example.com/safe/alarms#> as safe
+
+	uses <http://example.com/supreme/monitors#> as supreme
+
+	uses <http://example.com/secure/architecture#> as secure
+
+	// Security System
+	instance SecuritySystem : secure:SecuritySystem [
+		system:hasIdentifier "Secure-01"
+		system:presents I1
+		system:presents I2
+		system:contains SmokeSensor1
+		system:contains SmokeSensor2
+		system:contains MotionSensor
+		system:contains AlarmSystem
+		system:contains MonitoringSystem
+	]
+
+	instance I1 : secure:I1 [
+		system:hasIdentifier "Secure-02"
+	]
+
+	instance I2 : secure:I2 [
+		system:hasIdentifier "Secure-03"
+	]
+
+	// Smart Smoke Sensor
+	instance SmokeSensor1 : smart:SmokeSensor [
+		system:hasIdentifier "Smart-01"
+		system:presents I3.S1
+	]
+
+	instance I3.S1 : smart:I3.S [
+		system:hasIdentifier "Smart-02"
+	]
+
+	instance SmokeSensor2 : smart:SmokeSensor [
+		system:hasIdentifier "Smart-03"
+		system:presents I3.S2
+	]
+
+	instance I3.S2 : smart:I3.S [
+		system:hasIdentifier "Smart-4"
+	]
+
+	// Smart Motion Sensor
+	instance MotionSensor : smart:MotionSensor [
+		system:hasIdentifier "Smart-05"
+		system:presents I3.M
+	]
+
+	instance I3.M : smart:I3.M [
+		system:hasIdentifier "Smart-06"
+	]
+
+	// Safe Alarm System
+	instance AlarmSystem : safe:AlarmSystem [
+		system:hasIdentifier "Safe-01"
+		system:presents I4
+		system:presents I5
+		system:presents I6
+	]
+
+	instance I4 : safe:I4 [
+		system:hasIdentifier "Safe-02"
+	]
+
+	instance I5 : safe:I5 [
+		system:hasIdentifier "Safe-03"
+	]
+
+	instance I6 : safe:I6 [
+		system:hasIdentifier "Safe-04"
+	]
+
+	// Secure Monitoring System
+	instance MonitoringSystem : supreme:MonitoringSystem [
+		system:hasIdentifier "Supreme-01"
+		system:presents I7
+		system:presents I8
+	]
+
+	instance I7 : supreme:I7 [
+		system:hasIdentifier "Supreme-02"
+	]
+
+	instance I8 : supreme:I8 [
+		system:hasIdentifier "Supreme-03"
+	]
+
+	// Junction 1
+	instance Junction1 : secure:Junction1 [
+		system:hasIdentifier "Secure-04"
+		system:joins I1
+		system:joins I5
+	]
+
+	// Junction 2
+	instance Junction2 : secure:Junction2 [
+		system:hasIdentifier "Secure-05"
+		system:joins I8
+		system:joins I2
+	]
+
+	// Junction 3
+	instance Junction3.S1 : secure:Junction3.S [
+		system:hasIdentifier "Secure-06"
+		system:joins I3.S1
+		system:joins I4
+	]
+
+	instance Junction3.S2 : secure:Junction3.S [
+		system:hasIdentifier "Secure-07"
+		system:joins I3.S2
+		system:joins I4
+	]
+
+	instance Junction3.M : secure:Junction3.M [
+		system:hasIdentifier "Secure-08"
+		system:joins I3.M
+		system:joins I4
+	]
+
+	// Junction 4
+	instance Junction4 : secure:Junction4 [
+		system:hasIdentifier "Secure-09"
+		system:joins I6
+		system:joins I7
+	]
+}

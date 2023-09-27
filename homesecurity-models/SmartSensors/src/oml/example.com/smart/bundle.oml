@@ -1,0 +1,6 @@
+vocabulary bundle <http://example.com/smart/bundle#> as ^bundle {
+	
+	extends <http://example.com/homesecurity/v-bundle#>
+	
+	includes <http://example.com/smart/sensors#>
+}

@@ -1,0 +1,8 @@
+vocabulary bundle <http://example.com/secure/v-bundle#> as ^bundle {
+
+	extends <http://example.com/smart/bundle#>	
+	extends <http://example.com/safe/bundle#>
+	extends <http://example.com/supreme/bundle#>
+	
+	includes <http://example.com/secure/architecture#>
+}

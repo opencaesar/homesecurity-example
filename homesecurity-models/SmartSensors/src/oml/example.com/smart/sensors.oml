@@ -1,0 +1,26 @@
+vocabulary <http://example.com/smart/sensors#> as smart {
+
+	extends <http://example.com/homesecurity/architecture#> as hsa
+
+	extends <http://example.com/methodology/system#> as system
+
+	concept SmokeSensor < hsa:Sensor [
+		restricts all system:presents to I3.S
+	]
+
+	concept I3.S < hsa:I3 [
+		restricts all system:transfersOut to SmokeEvent
+	]
+
+	concept MotionSensor < hsa:Sensor [
+		restricts all system:presents to I3.M
+	]
+
+	concept I3.M < hsa:I3 [
+		restricts all system:transfersOut to MotionEvent
+	]
+
+	concept SmokeEvent < hsa:Event
+
+	concept MotionEvent < hsa:Event
+}

@@ -1,0 +1,91 @@
+vocabulary <http://example.com/homesecurity/architecture#> as hsa {
+
+	extends <http://example.com/methodology/system#> as system
+
+	concept SecuritySystem < system:Component [
+		restricts system:presents to exactly 1 I1
+		restricts system:presents to exactly 1 I2
+		restricts system:contains to min 1 Sensor
+		restricts system:contains to exactly 1 AlarmSystem
+		restricts system:contains to exactly 1 MonitoringSystem
+	]
+
+	concept I1 < system:Interface [
+		restricts all system:transfersOut to Panic
+	]
+
+	concept I2 < system:Interface [
+		restricts all system:transfersIn to Dispatch
+	]
+
+	concept Sensor < system:Component [
+		restricts system:presents to exactly 1 I3
+	]
+
+	concept I3 < system:Interface [
+		restricts all system:transfersOut to Event
+	]
+
+	concept AlarmSystem < system:Component [
+		restricts system:presents to exactly 1 I4
+		restricts system:presents to exactly 1 I5
+		restricts system:presents to exactly 1 I6
+	]
+
+	concept I4 < system:Interface [
+		restricts all system:transfersIn to Event
+	]
+
+	concept I5 < system:Interface [
+		restricts all system:transfersIn to Panic
+	]
+
+	concept I6 < system:Interface [
+		restricts all system:transfersOut to Alarm
+	]
+
+	concept MonitoringSystem < system:Component [
+		restricts system:presents to exactly 1 I7
+		restricts system:presents to exactly 1 I8
+	]
+
+	concept I7 < system:Interface [
+		restricts all system:transfersIn to Alarm
+	]
+
+	concept I8 < system:Interface [
+		restricts all system:transfersOut to Dispatch
+	]
+
+	concept Junction1 < system:Junction [
+		restricts system:joins to exactly 1 I1
+		restricts system:joins to exactly 1 I5
+		restricts all system:isTraversedBy to Panic
+	]
+
+	concept Junction2 < system:Junction [
+		restricts system:joins to exactly 1 I8
+		restricts system:joins to exactly 1 I2
+		restricts all system:isTraversedBy to Dispatch
+	]
+
+	concept Junction3 < system:Junction [
+		restricts system:joins to exactly 1 I3
+		restricts system:joins to exactly 1 I4
+		restricts all system:isTraversedBy to Event
+	]
+
+	concept Junction4 < system:Junction [
+		restricts system:joins to exactly 1 I6
+		restricts system:joins to exactly 1 I7
+		restricts all system:isTraversedBy to Alarm
+	]
+
+	concept Event < system:Message
+
+	concept Panic < system:Message
+
+	concept Alarm < system:Message
+
+	concept Dispatch < system:Message
+}

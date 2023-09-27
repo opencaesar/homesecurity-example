@@ -1,0 +1,16 @@
+vocabulary <http://example.com/supreme/monitors#> as ^supreme {
+	
+	extends <http://example.com/homesecurity/architecture#> as hsa
+
+	extends <http://example.com/methodology/system#> as system
+
+	concept MonitoringSystem < hsa:MonitoringSystem [
+		restricts system:presents to exactly 1 I7
+		restricts system:presents to exactly 1 I8
+	]
+	
+	concept I7 < hsa:I7
+	
+	concept I8 < hsa:I8
+	
+}

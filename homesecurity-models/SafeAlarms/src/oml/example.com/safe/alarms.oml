@@ -1,0 +1,40 @@
+vocabulary <http://example.com/safe/alarms#> as safe {
+	
+	extends <http://example.com/homesecurity/architecture#> as hsa
+
+	extends <http://example.com/methodology/system#> as system
+
+	concept AlarmSystem < hsa:AlarmSystem [
+		restricts system:presents to exactly 1 I4
+		restricts system:presents to exactly 1 I5
+		restricts system:presents to exactly 1 I6
+		restricts system:presents to max 1 I9
+	]
+	
+	concept I4 < hsa:I4
+
+	concept I5 < hsa:I5
+
+	concept I6 < hsa:I6
+
+	concept I9 < system:Interface [
+		restricts all system:transfersOut to Sound
+	]
+	
+	concept Speaker < system:Component [
+		restricts system:presents to exactly 1 I10
+	]
+	
+	concept I10 < system:Interface [
+		restricts all system:transfersIn to Sound
+	]
+
+	concept Junction5 < system:Junction [
+		restricts system:joins to exactly 1 I9
+		restricts system:joins to exactly 1 I10
+		restricts all system:isTraversedBy to Sound 
+	]
+
+	concept Sound < system:Message
+	
+}
