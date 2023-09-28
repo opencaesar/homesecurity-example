@@ -66,12 +66,12 @@ vocabulary <http://example.com/methodology/system#> as system {
 		to Message
 		asymmetric
 		irreflexive
-	]
+	] < transfers
 
 	relation transfersOut [
 		from Interface
 		to Message
 		asymmetric
 		irreflexive
-	]
+	] < transfers
 }
