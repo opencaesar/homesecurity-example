@@ -21,7 +21,7 @@
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_OdAcYFz_Ee6QXvg4fmuB0A">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/homesecurity-viewpoint/description/methodology.odesign#//@ownedViewpoints[name='Systems']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_-5YPEl0BEe6QXvg4fmuB0A" name="Secure Security System" repPath="#_-5YPEF0BEe6QXvg4fmuB0A" changeId="1695801235450">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_-5YPEl0BEe6QXvg4fmuB0A" name="Secure Security System" repPath="#_-5YPEF0BEe6QXvg4fmuB0A" changeId="1695875765491">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/homesecurity-viewpoint/description/methodology.odesign#//@ownedViewpoints[name='Systems']/@ownedRepresentations[name='Structure%20diagram']"/>
         <target xmi:type="oml:ConceptInstance" href="src/oml/example.com/secure/prototype.oml#SecuritySystem"/>
       </ownedRepresentationDescriptors>
@@ -1635,7 +1635,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_alHcsF0KEe6QXvg4fmuB0A" name="Panic" sourceNode="_alAH8F0KEe6QXvg4fmuB0A" targetNode="_alAvCV0KEe6QXvg4fmuB0A">
       <target xmi:type="oml:ConceptInstance" href="src/oml/example.com/secure/prototype.oml#Junction1"/>
       <semanticElements xmi:type="oml:ConceptInstance" href="src/oml/example.com/secure/prototype.oml#Junction1"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_alHcsV0KEe6QXvg4fmuB0A" targetArrow="NoDecoration" size="2">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_alHcsV0KEe6QXvg4fmuB0A" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/homesecurity-viewpoint/description/methodology.odesign#//@ownedViewpoints[name='Systems']/@ownedRepresentations[name='Structure%20diagram']/@defaultLayer/@edgeMappings[name='Junction']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_alHcsl0KEe6QXvg4fmuB0A" labelSize="12" showIcon="false"/>
       </ownedStyle>
@@ -1644,7 +1644,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_alHctV0KEe6QXvg4fmuB0A" name="Dispatch" sourceNode="_alAvEl0KEe6QXvg4fmuB0A" targetNode="_alAH810KEe6QXvg4fmuB0A">
       <target xmi:type="oml:ConceptInstance" href="src/oml/example.com/secure/prototype.oml#Junction2"/>
       <semanticElements xmi:type="oml:ConceptInstance" href="src/oml/example.com/secure/prototype.oml#Junction2"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_alHctl0KEe6QXvg4fmuB0A" targetArrow="NoDecoration" size="2">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_alHctl0KEe6QXvg4fmuB0A" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/homesecurity-viewpoint/description/methodology.odesign#//@ownedViewpoints[name='Systems']/@ownedRepresentations[name='Structure%20diagram']/@defaultLayer/@edgeMappings[name='Junction']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_alHct10KEe6QXvg4fmuB0A" labelSize="12" showIcon="false"/>
       </ownedStyle>
@@ -1653,7 +1653,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_alHcul0KEe6QXvg4fmuB0A" name="Event" sourceNode="_alAIAF0KEe6QXvg4fmuB0A" targetNode="_alAvBl0KEe6QXvg4fmuB0A">
       <target xmi:type="oml:ConceptInstance" href="src/oml/example.com/secure/prototype.oml#Junction3.S1"/>
       <semanticElements xmi:type="oml:ConceptInstance" href="src/oml/example.com/secure/prototype.oml#Junction3.S1"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_alHcu10KEe6QXvg4fmuB0A" targetArrow="NoDecoration" size="2">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_alHcu10KEe6QXvg4fmuB0A" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/homesecurity-viewpoint/description/methodology.odesign#//@ownedViewpoints[name='Systems']/@ownedRepresentations[name='Structure%20diagram']/@defaultLayer/@edgeMappings[name='Junction']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_alHcvF0KEe6QXvg4fmuB0A" labelSize="12" showIcon="false"/>
       </ownedStyle>
@@ -1662,7 +1662,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_alHcv10KEe6QXvg4fmuB0A" name="Event" sourceNode="_alAvAF0KEe6QXvg4fmuB0A" targetNode="_alAvBl0KEe6QXvg4fmuB0A">
       <target xmi:type="oml:ConceptInstance" href="src/oml/example.com/secure/prototype.oml#Junction3.S2"/>
       <semanticElements xmi:type="oml:ConceptInstance" href="src/oml/example.com/secure/prototype.oml#Junction3.S2"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_alHcwF0KEe6QXvg4fmuB0A" targetArrow="NoDecoration" size="2">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_alHcwF0KEe6QXvg4fmuB0A" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/homesecurity-viewpoint/description/methodology.odesign#//@ownedViewpoints[name='Systems']/@ownedRepresentations[name='Structure%20diagram']/@defaultLayer/@edgeMappings[name='Junction']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_alHcwV0KEe6QXvg4fmuB0A" labelSize="12" showIcon="false"/>
       </ownedStyle>
@@ -1671,7 +1671,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_alIDwF0KEe6QXvg4fmuB0A" name="Event" sourceNode="_alAvA10KEe6QXvg4fmuB0A" targetNode="_alAvBl0KEe6QXvg4fmuB0A">
       <target xmi:type="oml:ConceptInstance" href="src/oml/example.com/secure/prototype.oml#Junction3.M"/>
       <semanticElements xmi:type="oml:ConceptInstance" href="src/oml/example.com/secure/prototype.oml#Junction3.M"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_alIDwV0KEe6QXvg4fmuB0A" targetArrow="NoDecoration" size="2">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_alIDwV0KEe6QXvg4fmuB0A" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/homesecurity-viewpoint/description/methodology.odesign#//@ownedViewpoints[name='Systems']/@ownedRepresentations[name='Structure%20diagram']/@defaultLayer/@edgeMappings[name='Junction']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_alIDwl0KEe6QXvg4fmuB0A" labelSize="12" showIcon="false"/>
       </ownedStyle>
@@ -1680,7 +1680,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_alIDxV0KEe6QXvg4fmuB0A" name="Alarm" sourceNode="_alAvDF0KEe6QXvg4fmuB0A" targetNode="_alAvD10KEe6QXvg4fmuB0A">
       <target xmi:type="oml:ConceptInstance" href="src/oml/example.com/secure/prototype.oml#Junction4"/>
       <semanticElements xmi:type="oml:ConceptInstance" href="src/oml/example.com/secure/prototype.oml#Junction4"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_alIDxl0KEe6QXvg4fmuB0A" targetArrow="NoDecoration" size="2">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_alIDxl0KEe6QXvg4fmuB0A" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/homesecurity-viewpoint/description/methodology.odesign#//@ownedViewpoints[name='Systems']/@ownedRepresentations[name='Structure%20diagram']/@defaultLayer/@edgeMappings[name='Junction']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_alIDx10KEe6QXvg4fmuB0A" labelSize="12" showIcon="false"/>
       </ownedStyle>
