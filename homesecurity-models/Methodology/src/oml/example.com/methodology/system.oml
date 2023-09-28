@@ -17,6 +17,7 @@ vocabulary <http://example.com/methodology/system#> as system {
 	scalar property hasIdentifier [
 		domain IdentifiedElement
 		range xsd:string
+		functional
 	]
 
 	relation contains [
